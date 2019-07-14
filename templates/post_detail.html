@@ -1,3 +1,8 @@
-<p> {{object.title}} </p>
+<p> {{post.title}} </p>
 
-<img src="http://{{ request.META.HTTP_HOST }}/{{object.image}}">
+<img src="/{{post.image}}">
+
+<div>
+    <a href="{% url 'update_post' post.id %}">Update Post Title</a>
+    <a href="{% url 'delete_post' post.id %}">Delete Post</a>
+</div>
