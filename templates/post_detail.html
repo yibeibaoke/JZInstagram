@@ -1,3 +1,7 @@
+{% extends 'nav.html' %}
+
+{% block content %}
+
 <p> {{post.title}} </p>
 
 <img src="/{{post.image}}">
@@ -6,3 +10,5 @@
     <a href="{% url 'update_post' post.id %}">Update Post Title</a>
     <a href="{% url 'delete_post' post.id %}">Delete Post</a>
 </div>
+
+{% endblock content %}
